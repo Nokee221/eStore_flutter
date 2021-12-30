@@ -21,7 +21,7 @@ class _CartFullState extends State<CartFull> {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.only(
             bottomRight: Radius.circular(16), topRight: Radius.circular(16)),
-        color: Theme.of(context).backgroundColor,
+        color: Colors.blue[200],
       ),
       child: Row(
         children: [
@@ -135,20 +135,21 @@ class _CartFullState extends State<CartFull> {
                         width: MediaQuery.of(context).size.width * 0.11,
                         padding: EdgeInsets.all(8.0),
                         decoration: BoxDecoration(
-                            gradient: LinearGradient(
-                          colors: [
-                            ColorsConsts.gradiendLStart,
-                            ColorsConsts.gradiendLEnd,
-                          ],
-                          stops: [0.0, 0.7],
-                        )),
+                          gradient: LinearGradient(
+                            colors: [
+                              ColorsConsts.gradiendLStart,
+                              ColorsConsts.gradiendLEnd,
+                            ],
+                            stops: [0.0, 0.7],
+                          ),
+                        ),
                         child: Text(
                           "1",
                           textAlign: TextAlign.center,
                         ),
                       ),
                     ),
-                    Material( 
+                    Material(
                       color: Colors.transparent,
                       child: InkWell(
                         borderRadius: BorderRadius.circular(4.0),

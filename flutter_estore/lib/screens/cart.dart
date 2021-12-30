@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_estore/screens/cart_empty.dart';
-import 'package:flutter_estore/screens/cart_full.dart';
+import 'package:flutter_estore/consts/colors.dart';
+import 'package:flutter_estore/widget/cart_empty.dart';
+import 'package:flutter_estore/widget/cart_full.dart';
 
 class CartPage extends StatelessWidget {
   const CartPage({Key? key}) : super(key: key);
@@ -54,21 +55,34 @@ class CartPage extends StatelessWidget {
             // mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Expanded(
-                child: Material(
-                  borderRadius: BorderRadius.circular(30),
-                  color: Colors.red,
-                  child: InkWell(
-                    onTap: () {},
+                child: Container(
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: [
+                        ColorsConsts.gradiendLStart,
+                        ColorsConsts.gradiendLEnd,
+                      ],
+                      stops: [0.0, 0.7],
+                      
+                    ),
                     borderRadius: BorderRadius.circular(30),
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(
-                        'Checkout',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Theme.of(ctx).textSelectionColor,
-                          fontSize: 18,
-                          fontWeight: FontWeight.w600,
+
+                  ),
+                  child: Material(
+                    color: Colors.transparent,
+                    child: InkWell(
+                      onTap: () {},
+                      borderRadius: BorderRadius.circular(30),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                          'Checkout',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Theme.of(ctx).textSelectionColor,
+                            fontSize: 18,
+                            fontWeight: FontWeight.w600,
+                          ),
                         ),
                       ),
                     ),
