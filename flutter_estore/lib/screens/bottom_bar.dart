@@ -103,6 +103,7 @@ class _BottomBarScreenState extends State<BottomBarScreen> {
       floatingActionButton: Padding(
         padding: const EdgeInsets.all(8.0),
         child: FloatingActionButton(
+          backgroundColor: Colors.blue,
           hoverElevation: 10,
           splashColor: Colors.grey,
           tooltip: 'Search',
