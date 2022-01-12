@@ -41,6 +41,8 @@ dependencies:
   badges: ^2.0.2
   backdrop: ^0.7.1
   carousel_slider: ^4.0.0
+  flutter_swiper_null_safety: ^1.0.2
+
 
 
 
@@ -81,6 +83,19 @@ flutter:
     - assets/images/carousel2.jpeg
     - assets/images/carousel3.jpg
     - assets/images/carousel4.png
+    - assets/images/apple.jpg
+    - assets/images/Dell.jpg
+    - assets/images/h&m.jpg
+    - assets/images/Huawei.jpg
+    - assets/images/nike.jpg
+    - assets/images/samsung.jpg
+    - assets/images/CatBeauty.jpg
+    - assets/images/CatClothes.jpg
+    - assets/images/CatLaptops.png
+    - assets/images/CatWatches.jpg
+    - assets/images/CatFurniture.jpg
+    - assets/images/CatShoes.jpg
+    - assets/images/CatPhones.png
   
 
   # An image asset can refer to one or more resolution-specific "variants", see
