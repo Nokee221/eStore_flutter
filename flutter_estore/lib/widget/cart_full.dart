@@ -159,7 +159,7 @@ class _CartFullState extends State<CartFull> {
                           child: Container(
                             child: Icon(
                               Icons.plus_one,
-                              color: Colors.green,
+                              color: Colors.red,
                               size: 22,
                             ),
                           ),
