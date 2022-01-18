@@ -3,6 +3,7 @@ import 'package:backdrop/backdrop.dart';
 import 'package:flutter_estore/consts/colors.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter_estore/widget/category.dart';
+import 'package:flutter_estore/widget/popular_products.dart';
 import 'package:flutter_swiper_null_safety/flutter_swiper_null_safety.dart';
 
 final List<String> _carouselImages = [
@@ -129,22 +130,61 @@ class _HomePageState extends State<HomePage> {
                     ],
                   ),
                 ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    height: 210,
+                    width: MediaQuery.of(context).size.width * 0.95,
+                    child: Swiper(
+                      itemCount: _brandImages.length,
+                      autoplay: true, 
+                      onTap: (index) {},
+                      itemBuilder: (BuildContext ctx, int index) {
+                        return ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: Container(
+                            
+                            child: Image.asset(_brandImages[index], fit: BoxFit.fill,)
+                            ),
+                        );
+                      },
+                    ),
+                  ),
+                  
+                ),
+                 Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    children: [
+                      Text(
+                        "Popular Products",
+                        style:
+                            TextStyle(fontWeight: FontWeight.w800, fontSize: 20),
+                      ),
+                      Spacer(),
+                      FlatButton(
+                        onPressed: () {},
+                        child: Text(
+                          "View all",
+                          style: TextStyle(
+                              fontWeight: FontWeight.w800,
+                              fontSize: 15,
+                              color: Colors.red),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
                 Container(
-                  height: 210,
-                  width: MediaQuery.of(context).size.width * 0.95,
-                  child: Swiper(
-                    itemCount: _brandImages.length,
-                    autoplay: true,
-                    onTap: (index) {},
-                    itemBuilder: (BuildContext ctx, int index) {
-                      return ClipRRect(
-                        borderRadius: BorderRadius.circular(10),
-                        child: Container(
-                          
-                          child: Image.asset(_brandImages[index], fit: BoxFit.fill,)
-                          ),
-                      );
-                    },
+                  width: double.infinity,
+                  height: 285,
+                  margin: EdgeInsets.symmetric(horizontal: 3),
+                  child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: 8,
+                    itemBuilder: (BuildContext context , int index){
+                      return PopularProducts();
+                    }
                   ),
                 )
               ],
